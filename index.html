@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بہترین شوہر کی 100 نشانیاں</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Nastaliq Urdu',serif;background:#fdfbf5;color:#222;line-height:2}
+header{background:linear-gradient(135deg,#0d4a30,#1e8c54);color:#fff;padding:40px 15px;text-align:center}
+header h1{font-size:38px} header p{font-size:18px;margin-top:10px}
+.top-link a{background:#fff;color:#0d4a30;padding:9px 20px;border-radius:25px;text-decoration:none;font-weight:700;margin:5px;display:inline-block}
+.menu{position:sticky;top:0;background:#fff;padding:12px;box-shadow:0 2px 10px #0001;display:flex;gap:8px;overflow-x:auto;z-index:9}
+.menu button{border:2px solid #1e8c54;background:#fff;color:#1e8c54;padding:7px 16px;border-radius:20px;font-family:inherit;font-weight:700;cursor:pointer}
+.menu button.active{background:#1e8c54;color:#fff}
+.wrap{max-width:1100px;margin:20px auto;padding:0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 3px 12px #0001;border-right:5px solid #1e8c54}
+.card b.num{background:#e8f5e9;color:#0d4a30;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;margin-left:6px}
+.card h3{font-size:19px;color:#0d4a30} .card p{font-size:17px;color:#444;margin-top:5px}
+</style>
+</head>
+<body>
+<header>
+<h1>بہترین شوہر کیسا ہوتا ہے؟</h1>
+<p>100 نکات پر مشتمل مکمل اسلامی رہنمائی - 4 حصوں میں</p>
+<div class="top-link">
+<a href="tel:03142028572">📞 03142028572</a>
+<a href="https://wa.me/923142028572">عبدالواجد</a>
+</div>
+</header>
+<div class="menu">
+<button class="active" onclick="show('all',this)">تمام 100</button>
+<button onclick="show('mohabbat',this)">1-25 محبت</button>
+<button onclick="show('kirdar',this)">26-50 کردار</button>
+<button onclick="show('wafadari',this)">51-75 وفاداری</button>
+<button onclick="show('zimmedari',this)">76-100 ذمہ داری</button>
+</div>
+<div class="wrap"><div id="grid" class="grid"></div></div>
+<script>
+const data=[
+  ["mohabbat","1. سلام میں پہل کرنا","گھر آتے ہی مسکرا کر سلام کرنا۔"],
+["mohabbat","2. اچھے نام سے بلانا","بیوی کو پیارے نام سے بلائیں۔"],
+["mohabbat","3. روز تعریف کرنا","روز اس کے کسی کام کی تعریف کریں۔"],
+["mohabbat","4. چھوٹا تحفہ دینا","پھول یا چاکلیٹ محبت بڑھاتا ہے۔"],
+["mohabbat","5. توجہ سے سننا","موبائل رکھ کر 15 منٹ سنیں۔"],
+["mohabbat","6. ہنس مکھ رہنا","گھر میں ہنسی مذاق رکھیں۔"],
+["mohabbat","7. پیار سے ہاتھ پکڑنا","اعتماد کے لیے ہاتھ تھامنا۔"],
+["mohabbat","8. دکھ میں سہارا","بیماری میں سہارا بنیں۔"],
+["mohabbat","9. پسند کا خیال","اس کی پسند کا کھانا بنا دیں۔"],
+["mohabbat","10. عزت سے پکارنا","برے لفظ سے نہ پکاریں۔"],
+["mohabbat","11. معاف کرنا","چھوٹی غلطی معاف کر دیں۔"],
+["mohabbat","12. طعنے نہ دینا","پرانی باتیں نہ
+ ["wafadari","66. نکاح کے وعدے","نکاح کے وعدے نبھائیں۔"],
+["wafadari","67. جھوٹا الزام نہ لگانا","الزام رشتہ ختم کرتا ہے۔"],
+["wafadari","68. موازنہ نہ کرنا","موازنہ نہ کریں۔"],
+["wafadari","69. خفیہ دوستی سے بچنا","چھپ کر دوستی نہ رکھیں۔"],
+["wafadari","70. دل جوئی","دل خوش رکھیں۔"],
+["wafadari","71. دستیاب رہنا","ضرورت پر موجود ہوں۔"],
+["wafadari","72. عزت پر سمجھوتہ نہ کرنا","بے عزتی پر دفاع کریں۔"],
+["wafadari","73. عبادت سمجھنا","نکاح کو عبادت سمجھیں۔"],
+["wafadari","74. خیانت سے بچنا","خیانت ذلت ہے۔"],
+["wafadari","75. موت تک ساتھ","رشتہ جنت تک۔"],
+["zimmedari","76. نان و نفقہ","کھانے کپڑے کا انتظام۔"],
+["zimmedari","77. رہائش","محفوظ رہائش۔"],
+["zimmedari","78. مہر ادا کرنا","مہر جلدی ادا کریں۔"],
+["zimmedari","79. علاج","بیماری میں علاج۔"],
+["zimmedari","80. دین سکھانا","قرآن نماز سکھانا۔"],
+["zimmedari","81. پردے کا انتظام","پردہ دار ماحول۔"],
+["zimmedari","82. تربیت","بچوں کی تربیت۔"],
+["zimmedari","83. توازن","ماں بیوی میں انصاف۔"],
+["zimmedari","84. مار پیٹ سے پرہیز","مارنا ناپسندیدہ۔"],
+["zimmedari","85. بخل نہ کرنا","کھلے دل سے خرچ۔"],
+["zimmedari","86. کام پر مجبور نہ کرنا","مجبور نہ کریں۔"],
+["zimmedari","87. آرام کا خیال","حمل میں آرام۔"],
+["zimmedari","88. اچھے اخلاق","اچھے اخلاق سے پیش۔"],
+["zimmedari","89. گھر کو وقت","وقت گھر کو دیں۔"],
+["zimmedari","90. بچوں کے سامنے عزت","بچوں کے سامنے عزت۔"],
+["zimmedari","91. کمائی پر نظر نہیں","اس کی مرضی سے خرچ۔"],
+["zimmedari","92
